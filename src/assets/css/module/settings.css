@@ -1,0 +1,33 @@
+.settings_list{
+    padding-left: 16px;
+    margin-top: 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #dce3e8;
+    border-top: 1px solid #dce3e8;
+}
+.settings_item{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #dce3e8;
+    font-size: 1.6em;
+}
+.settings_item a{
+    color: #384959;
+ }
+.settings_item:last-child{
+    border-bottom: 0;
+    border-bottom: none;
+}
+.icon.arrow{
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 13px;
+    background: url("img/icon_setting_arrow.png") no-repeat center;
+    background-size: cover;
+    right: 16px;
+    top: 16px;
+}

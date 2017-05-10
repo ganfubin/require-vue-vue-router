@@ -1,4 +1,4 @@
-define(['text!temple/hosBanlance.html','css!assets/css/hosBanlance.css', 'vue', 'common'],
+define(['text!temple/hosBanlance.html','css!assets/css/module/hosBanlance.css', 'vue', 'common'],
     function(sTpl, css, Vue, common){
         var vueComponent = Vue.extend({
             template: sTpl,

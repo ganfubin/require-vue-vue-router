@@ -1,6 +1,6 @@
 define(function (require, exports, module) {
     var sTpl = require('text!temple/modifyInfo.html');
-    require("css!assets/css/modifyInfo.css");
+    require("css!assets/css/module/modifyInfo.css");
     var common = require('common');
     var Vue = require("vue");
     require('mobiscroll');

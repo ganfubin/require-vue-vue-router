@@ -1,0 +1,143 @@
+#add-hos .search_box{
+    height: 44px;
+    background-color: #dfe4e8;
+    padding: 8px;
+}
+#add-hos .search_btn{
+    display: inline-block;
+    width:100%;
+    background-color: #fff;
+    height: 28px;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#add-hos .icon.search{
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url("../img/icon_search.png") 100% center;
+    background-size: cover;
+}
+
+/*列表*/
+#add-hos .tag_list .tag{
+    background-color: #edf3f8;
+    height: 30px;
+    padding:0 16px;
+    color: #8e8e93;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 30px;
+}
+#add-hos .hos_list{
+    padding-left: 16px;
+    background-color: #fff;
+}
+#add-hos .hos_item{
+    height: 99px;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+    padding-top: 17px;
+    cursor: pointer;
+}
+#add-hos .hos_item:last-child {
+    border-bottom: none;
+    border-bottom: 0;
+}
+#add-hos .hos_item>div{
+    float: left;
+}
+#add-hos .hos_item .content{
+    position: absolute;
+    left: 90px;
+    right: 50px;
+}
+#add-hos .hos_item .hos_pic{
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+    background-size: contain;
+    margin-right: 12px;
+}
+#add-hos .hos_item .hos_pic>img{
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+#add-hos .hos_item .hos_name{
+    font-size: 1.7em;
+    color: #2a3c4c;
+    margin: 12px 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+#add-hos .hos_item .hos_address{
+    font-size: 1.2em;
+    color: #9ca6af;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#add-hos .index{
+    position: fixed;
+    right: 0;
+    top: 44px;
+    width: 16px;
+    background-color: #fff;
+    bottom: 0;
+    z-index: 10;
+}
+#add-hos .index_list {
+    position: absolute;
+    top: 30px;
+}
+#add-hos .index_item {
+    margin-bottom: 8px;
+    font-size: 0.8em;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+#add-hos .index_item a{
+    color: #55a8fd;
+}
+
+#add-hos .back_to_myHos{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #55a8fd;
+    color: #fff;
+    z-index: 500;
+    font-size: 1.6em;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+}
+
+#add-hos .all_tag{
+    padding-bottom: 45px;;
+}

@@ -1,0 +1,92 @@
+#points.wrap {
+    padding-top: 3.3rem;
+    background-color: #edf3f8;
+}
+#points header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3.3rem;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+}
+#points header h2 {
+    font-size: 1.42rem;
+    line-height: 3.3rem;
+    text-align: center;
+    color: #3d5067;
+}
+#points header a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13.33%;
+    height: 100%;
+    background: url('../img/icon_back.png') center center no-repeat;
+    background-size: 20% 38.64%;
+}
+#points.wrap .current {
+    height: 5.89rem;
+    padding: 0 4% 0 4.4%;
+    border-bottom: 1px solid #dce3e8;
+    font-size: 1.35rem;
+    line-height: 5.89rem;
+    color: #898e95;
+    background-color: #fff;
+}
+#points.wrap .current span {
+    float: right;
+    font-size: 2.47rem;
+    color: #ecaafa;
+}
+#points.wrap .point {
+    height: 2.1rem;
+    padding-left: 4.4%;
+    border-bottom: 1px solid #dce3e8;
+    font-size: 0.97rem;
+    line-height: 2.1rem;
+    color: #999;
+}
+#points .content{
+    position: absolute;
+    top: 11.5em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+}
+#points .wrap ul {
+    padding-left: 4.4%;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+
+}
+#points.wrap li {
+    height: 4.87rem;
+    padding-right: 4.18%;
+    border-bottom: 1px solid #dce3e8;
+}
+#points.wrap li:last-child {
+    border: 0;
+}
+#points.wrap li .mes {
+    float: left;
+}
+#points.wrap li h2 {
+    padding-top: 0.75rem;
+    font-size: 1.35rem;
+    line-height: 2.1rem;
+    color: #303030;
+}
+#points.wrap li h3 {
+    font-size: 0.9rem;
+    line-height: 1.27rem;
+    color: #898e95;
+}
+#points.wrap li p {
+    float: right;
+    font-size: 1.35rem;
+    line-height: 4.87rem;
+    color: #898e95;
+}

@@ -1,6 +1,6 @@
 define(function (require, exports, module) {
     var sTpl = require('text!temple/agreement.html');
-    require("css!assets/css/agreement.css");
+    require("css!assets/css/module/agreement.css");
 
 
     var Vue = require("vue");

@@ -1,4 +1,4 @@
-define(['text!temple/addHos.html','css!assets/css/addHos.css', 'vue', 'common', 'py'],
+define(['text!temple/addHos.html','css!assets/css/module/addHos.css', 'vue', 'common', 'py'],
     function(sTpl, css, Vue, common, pinyin){
         var vueComponent = Vue.extend({
             template: sTpl,

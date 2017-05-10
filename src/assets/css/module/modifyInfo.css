@@ -1,0 +1,220 @@
+#modify.wrap{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#modify .header {
+    height: 220px;
+    padding-top: 65px;
+}
+#modify .pic {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+    background-color: lightblue;
+    position: relative;
+
+    overflow: hidden;
+}
+#modify .pic #uploadImg{
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(98, 98, 123, 0.3) url("../../img/icon_camera.png") no-repeat center;
+    background-size: contain;
+}
+#modify .pic input{
+    opacity: 0;
+}
+#modify .pic img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50% ;
+    -webkit-border-radius: 50% ;
+    -moz-border-radius: 50%;
+}
+#modify .modify_list {
+    padding-left: 16px;
+    border-top: 1px solid #dce3e8;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+}
+#modify .modify_item {
+    position: relative;
+    cursor: pointer;
+    height: 44px;
+    border-bottom: 1px solid #dce3e8;
+    line-height: 44px;
+    font-size: 1.5em;
+}
+#modify .modify_item:last-child{
+    border: 0;
+}
+#modify .modify_list>.modify_item:last-child {
+    border-bottom: 0;
+    border-bottom: none;
+    display: flex;
+}
+#modify .modify_item .tag {
+    margin-right: 20px;
+    color: #2a3c4d;
+}
+#modify .modify_item .value {
+    color: #8e8e93;
+}
+#modify .icon.arrow_down {
+    position: absolute;
+    background: url("../../img/icon_arrow_down.png") no-repeat center;
+    background-size: cover;
+    width: 13px;
+    height: 7px;
+    right: 16px;
+    top: 18px;
+}
+#modify .modify_mask {
+    padding: 0 16px;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+#modify .modify_mask .modify_name {
+
+    height: 160px;
+    background-color: #f8f8f8;
+
+    padding-top: 35px;
+
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+
+    margin: 50% auto 0;
+}
+#modify .modify_mask .modify_name .modify_header {
+    text-align: center;
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 26px;
+}
+#modify .name_input{
+    padding: 0 16px;
+    margin-bottom: 12px;
+}
+#newName{
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #808080;
+    height: 26px;
+    padding:0 5px;
+    outline: none;
+    color: #333;
+}
+#modify .modify_footer{
+    height: 43px;
+    border-top: 1px solid #d9d9d9;
+    display: flex;
+}
+#modify .modify_footer .btn{
+    flex: 1;
+    border-right: 1px solid #d9d9d9;
+    color: #007aff;
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 44px;
+    cursor: pointer;
+}
+#modify .modify_footer .btn:last-child{
+    border-right: 0;
+    border-right: none;
+}
+
+#modify .modify_gender{
+    padding: 0 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+#modify .modify_gender .modify_group {
+    background-color: #fafbfb;
+    border: 1px solid #d9dada;
+
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+
+    margin-bottom: 12px;
+}
+#modify .modify_gender .modify_group .modify_item{
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: #007aff;
+
+}
+#modify .modify_gender .modify_group .modify_item.current {
+    color: #ff3824;
+}
+#pick_date{
+    position: absolute;
+    display: inline-block;
+    border: 0;
+    height: 44px;
+    line-height: 44px;
+    color: #8e8e93;
+    right: 0;
+    width: 100%;
+    left: 56px;
+}
+#pick_date::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url("../../img/icon_arrow_down.png") no-repeat center;
+    background-size: cover;
+    width: 13px;
+    height: 7px;
+    left: 0;
+    top: 0;
+
+}
+#modify input:not([type]):disabled{
+    background-color:#fff
+}
+#modify .submit_box{
+    width: 100%;
+    padding: 0 16px;
+    margin-top: 12px;
+}
+#modify .submit_box button{
+    border:0;
+    outline: none;
+
+    width: 100%;
+    font-size: 1.6em;
+    height: 44px;
+    line-height: 44px;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    background-color: #55a8fd;
+    color: #fff;
+    cursor: pointer;
+}

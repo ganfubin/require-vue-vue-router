@@ -1,4 +1,4 @@
-define(['text!temple/myhos.html','css!assets/css/myhos.css', 'vue', 'common'],
+define(['text!temple/myhos.html','css!assets/css/module/myhos.css', 'vue', 'common'],
     function(sTpl, css, Vue, common){
         var vueComponent = Vue.extend({
             template: sTpl,

@@ -1,0 +1,141 @@
+#balance.wrap {
+    padding-top: 3.3rem;
+    background-color: #edf3f8;
+}
+#balance header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3.3rem;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+}
+#balance header h2 {
+    font-size: 1.42rem;
+    line-height: 3.3rem;
+    text-align: center;
+    color: #3d5067;
+}
+#balance header a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13.33%;
+    height: 100%;
+    background: url('../img/icon_back.png') center center no-repeat;
+    background-size: 20% 38.64%;
+}
+#balance .money {
+    height: 5.89rem;
+    padding: 0 4.27% 0 4.4%;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+}
+#balance .money div {
+    float: left;
+}
+#balance .money h3 {
+    padding-top: 0.37rem;
+    font-size: 0.97rem;
+    line-height: 1.72rem;
+    color: #898e95;
+}
+#balance .money h2 {
+    font-size: 1.35rem;
+    color: #55a8fd;
+}
+#balance .money h2 span {
+    font-size: 2.47rem;
+    line-height: 3.3rem;
+}
+#balance .money a {
+    float: right;
+    width: 23.07%;
+    height: 2.02rem;
+    border: 1px solid #55a8fd;
+    margin-top: 1.89rem;
+    font-size: 0.97rem;
+    line-height: 2.02rem;
+    text-align: center;
+    color: #55a8fd;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
+    border-radius: 27px;
+}
+#balance .instruction {
+    height: 2.66rem;
+    padding: 0 12% 0 4.4%;
+    border-bottom: 1px solid #dce3e8;
+    font-size: 0.97rem;
+    line-height: 2.66rem;
+    color: #999;
+}
+#balance .item h2 span.Num,
+#balance .instruction span {
+    float: right;
+}
+#balance .item {
+    overflow: hidden;
+    height: 3.19rem;
+    padding-left: 4.4%;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+}
+#balance .wrap .show {
+    height: 8rem;
+}
+#balance .item h2 {
+    height: 3.26rem;
+    padding-right: 12.55%;
+    font-size: 1.35rem;
+    line-height: 3.26rem;
+    color: #303030;
+    background: url('../img/down.png') 95% center no-repeat;
+    background-size: 3.49% 16.09%;
+}
+#balance .wrap .show h2 {
+    background: url('../img/up.png') 95% center no-repeat;
+    background-size: 3.49% 16.09%;
+}
+#balance .item h3 {
+    padding: 0.56rem 12.55% 0 0;
+    border-top: 1px solid #dce3e8;
+    font-size: 0.97rem;
+    line-height: 1.72rem;
+    color: #898e95;
+}
+#balance .item h3 span {
+    padding-left: 2.79%;
+}
+#balance .item div {
+    overflow: hidden;
+    padding-bottom: 0.94rem;
+}
+#balance .item em {
+    float: left;
+    width: 17.1%;
+    font-size: 0.97rem;
+    line-height: 1.72rem;
+    color: #898e95;
+}
+#balance .item p {
+    float: left;
+    width: 68%;
+    padding-left: 3.19%;
+    font-size: 0.97rem;
+    line-height: 1.72rem;
+    color: #898e95;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+#balance .list{
+    position: absolute;
+    top: 12em;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+}

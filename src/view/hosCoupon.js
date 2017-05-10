@@ -1,4 +1,4 @@
-define(['text!temple/hosCoupon.html','css!assets/css/hosCoupon.css','vue','common', 'component/loading/loading'],
+define(['text!temple/hosCoupon.html','css!assets/css/module/hosCoupon.css','vue','common', 'component/loading/loading'],
     function(sTpl, css, Vue, common, 'cmptLoading'){
 
         var vueComponent = Vue.extend({

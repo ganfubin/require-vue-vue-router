@@ -1,4 +1,4 @@
-define(['text!temple/settings.html','css!assets/css/settings.css'],
+define(['text!temple/settings.html','css!assets/css/module/settings.css'],
     function(sTpl, css){
     	var Vue = require("vue");
         var vueComponent = Vue.extend({

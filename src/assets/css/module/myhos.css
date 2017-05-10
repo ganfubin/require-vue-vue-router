@@ -1,0 +1,108 @@
+#myHos.wrap{
+    padding-bottom: 80px;
+}
+#myHos .myhos_item{
+    position: relative;
+    height: 99px;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+    padding: 17px 16px 0;
+
+}
+#myHos .myhos_item:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 37px;
+    width: 15px;
+    height: 26px;
+    background: url("../../img/icon_setting_arrow.png") no-repeat center;
+}
+#myHos .myhos_item>div{
+    float: left;
+}
+#myHos .hos_pic{
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    overflow: hidden;
+
+    margin-right: 12px;
+}
+#myHos .hos_pic img{
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+#myHos .hos_content{
+     position: absolute;
+    left: 90px;
+    right: 50px;
+}
+#myHos .hos_content .hos_name{
+    white-space: nowrap;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    color: #2a3c4c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 65px;
+}
+#myHos .hos_content .hos_address{
+    font-size: 1.2em;
+    color: #9ca6af;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#myHos .btn.bind{
+    position: absolute;
+    right: 55px;
+    top: 28px;
+    padding: 4px 6px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    background-color: #55a8fd;
+    color: #fff;
+}
+#add_hos{
+    position: fixed;
+    height: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    color: #55a8fd;
+    font-size: 1.5em;
+    line-height: 44px;
+}
+
+#myHos .icon.add{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../../img/icon_add.png") 100% center;
+    background-size: cover;
+    position: relative;
+    top: 3px;
+    margin-right: 12px;
+}
+#myHos .empty {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../../img/empty_hos.png") no-repeat center;
+    background-size: 25%;
+}
