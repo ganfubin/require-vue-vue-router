@@ -1,0 +1,192 @@
+    <section id="chat">
+        <!--聊天面板-->
+        <div class="panel_session">
+            <ul class="sessions_list">
+                <li class="sessions_item" v-for="(item,index) in cache.sessions" @click="selCurrentDoc(item)" v-if="isShowSession(item)" :id="item.id">
+                    <div class="pic bd-50" >
+                        <img  :src="getSessionSrc(item)" class="bd-50" />
+                    </div>
+                    <div class="content">
+                        <p class="name" ><span v-text="getNameS(item)"></span><span class="time" v-text="transTimeMsg(item.updateTime)"></span></p>
+                        <p class="lstMsg"><span class="text_blue" v-text="getLastMsg(item)"></span><span class="badge" v-text="item.unread" v-if="item.unread>0">21</span></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="talk" @click="showMyHos()">咨询医生
+                <!--<div class="panel_empty"></div>-->
+            </div>
+
+        </div>
+        <!--我的医院->选取医生-->
+        <div class="panel_myHos">
+            <header>
+                <p><span class="btn_back" @click="back_to_sessions()"><i class="icon back" ></i></span>我的医院</p>
+            </header>
+            <ul class="myHos_list"  v-if="myHostList.length>0">
+                <li class="myHos_item" v-for="item in myHostList" @click="getDoctors(item)">
+                    <div class="pic bd-50">
+                        <img class="bd-50" :src="'http://www.hellodoctor.com.cn/'+item.logo">
+                    </div>
+                    <div class="content ">
+                        <div class="name"><span v-text="item.companyName"></span> <span class="has_bind">已绑定</span></div>
+                        <p class="address"v-text="item.areaAddress+item.areaAddress+item.areaAddress"></p>
+                    </div>
+                </li>
+            </ul>
+            <p class="add_hos" @click="addHos()"><i class="icon add"></i>添加医院</p>
+        </div>
+        <!--医生列表-->
+        <div class="panel_docslist">
+            <header>
+                <p><span class="btn_back" @click="doctorsListBack()"><i class="icon back" ></i></span><span v-text="currentHosName" class="companyName"></span></p>
+            </header>
+            <ul class="doctors_list" v-if="curedDoctors.length!=0">
+                <li class="doctors_tag">我的医生</li>
+                <li class="doctors_item" v-for="item in doctorsList" @click="selCurrentDocInHos(item)" v-if="isMyDoctors(item)">
+                    <div class="pic bd-50">
+                        <img :src="'http://www.hellodoctor.com.cn/'+item.imagePath" class="bd-50">
+                    </div>
+                    <div class="content">
+                        <p class="name" v-text="item.name"></p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="doctors_list">
+                <li class="doctors_tag nbt">其他医生</li>
+                <li class="doctors_item" v-for="item in doctorsList" @click="selCurrentDocInHos(item)" v-if="!isMyDoctors(item)">
+                    <div class="pic bd-50">
+                        <img :src="'http://www.hellodoctor.com.cn/'+item.imagePath" class="bd-50">
+                    </div>
+                    <div class="content">
+                        <p class="name" v-text="item.name"></p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <!--添加绑定-->
+        <div class="panel_addHos">
+            <!--<section class='search_box'>-->
+                <!--<span class="search_btn"><i class="icon search"></i>搜索</span>-->
+            <!--</section>-->
+            <section class="allHos">
+                <section class="tag_list" v-for="(item,index) in hosList">
+                    <p class="tag" :id="index" v-text="index"></p>
+                    <div class="hos_list">
+                        <div class="hos_item" v-for="v in item" @click="selHos(v)">
+                            <div class="hos_pic">
+                                <img class="bd-50" :src="'http://www.hellodoctor.com.cn'+v.logo"/>
+                            </div>
+                            <div class="content">
+                                <p class="hos_name" v-text="v.companyName"></p>
+                                <p class="hos_address" v-text="getFullAddress(v)"></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="index">
+                <ul class="index_list">
+                    <li class="index_item" v-for="item in hosListIndex" ><a :href="'#'+item.toUpperCase()" v-text="item.toUpperCase()"></a></li>
+                </ul>
+            </section>
+            <section >
+                <p class="back_to_myHos" @click="cancelAddHos()">取消</p>
+            </section>
+        </div>
+        <!--医院详情-->
+        <div class="panel_hosDetail">
+            <section class="hos_info">
+                <div class="hos_pic">
+                    <img class="bd-50" :src="'http://www.hellodoctor.com.cn/'+hosDetail.logo">
+                </div>
+                <p class="hos_name" v-text="hosDetail.companyName">中韩友好互助整形医院</p>
+                <p class="hos_address"><span v-text="getFullAddress(hosDetail)"></span> </p>
+                <i class="icon back"  @click="goAddHos()"></i>
+            </section>
+            <section class="hos_memo">
+                <h1>医院简介</h1>
+                <p class="memo_detail" v-text="hosDetail.memo"></p>
+            </section>
+            <section class="operation">
+                <a id="bind" @click="showBindHosAlert()" v-if="!hasBindHos()" ><i></i>绑定医院</a>
+            </section>
+        </div>
+        <!--医生详情-->
+        <div class="panel_docDetail">
+            <header>
+                <div class="doc_pic bd-50">
+                    <img  :src="getDoctDetailUrs()" class="bd-50">
+                    <span  class="auth_tag" v-if="userDetail.auth">已认证</span>
+                </div>
+                <p class="name"> <span  v-text="userDetail.name"></span><i class="icon male" v-if="userDetail.gender==1"></i><i class="icon female" v-if="userDetail.gender==2"></i></p>
+                <p class="info">
+                   <span class="age" v-text="'年龄:'+userDetail.age"></span>
+                </p>
+                <a class="btn_back" @click="userDetailBack()">
+                    <i class="icon back" ></i>
+                </a>
+            </header>
+            <dl class="detail">
+                <dt class='tag'>所属医院</dt>
+                <dd class="value" v-text="userDetail.position"></dd>
+                <dt class='tag'>医生简介</dt>
+                <dd class="value" v-text="userDetail.memo"></dd>
+                <dt class='tag'>擅长项目</dt>
+                <dd class="value" v-text="userDetail.tags"></dd>
+                <dt class='tag'>认证来源</dt>
+                <dd class="value">厦门德医互联信息科技有限公司</dd>
+            </dl>
+        </div>
+        <!--发送消息面板-->
+        <div class="panel_chat" ms-visible="@isShowSendPanel()">
+            <!--聊天顶部-->
+            <header>
+                <p class="info" @click="showUserDetail">
+                    <img class="bd-50" :src="getCurrDocAvatar(currentDoctor)">
+
+                    <span class="name" v-text="currentDoctor.nick">啊啊啊</span>
+
+                </p>
+                <a @click="chatBack()" class="btn_back">
+                    <i class="icon back"></i>
+                </a>
+                <p class="tags">
+                    <span v-for="(item,index) in currentDoctor.tags" v-text="item.name" :style="{color:getTagColor(index),'borderColor':getTagColor(index)}"></span>
+                </p>
+                <p class="dismiss">该医生已经离开医院</p>
+            </header>
+            <!--聊天主体-->
+            <div class="msg_box">
+                <ul class="msg_list">
+                    <li class="msg_item " v-for="(item,index) in currentMsgs" :class="{hide:isShowMsg(item.type),'target':item.flow=='in'}">
+                        <p class="timeLine" v-if="isShowTimeline(item,index)" v-text="transTimeMsg(item.time)"></p>
+                        <div class="content text"  :class="{target:isMyMsg(item.from)}" v-if="item.type=='text'">
+                            <p v-text="item.text"></p>
+                        </div>
+                        <div class="content img"  :class="{target:isMyMsg(item.from)}" v-if="item.type=='image'">
+                            <img :src="item.file.url" @click="viewImg(item.file.url)">
+                        </div>
+                        <div class="content audio"  :class="{target:isMyMsg(item.from)}" v-if="item.type=='audio'" >
+                            <i  @click="playAudio(item,$event)"></i>
+                            <span class="time" v-text="audioDur(item)"></span>
+                            <audio class="audio" >
+                                <source :src="item.file.mp3Url">
+                            </audio>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--发送栏-->
+            <footer :class="{'company':!isShowSendBar()}">
+                <ul class="tools" v-if="isShowSendBar()">
+                    <li class="tools_item img" @click="chooseImg()"></li>
+                    <input type="file" accept="image/*"  id="capture" capture="camera" @change="sendImg()" multiple="multiple"/>
+                </ul>
+                <div class="input_content" v-if="isShowSendBar()">
+                    <textarea  class="input_box" id="text_input" ></textarea>
+                </div>
+                <div id="send" v-if="isShowSendBar()" @click="sendMsg()">发送</div>
+            </footer>
+        </div>
+    </section>

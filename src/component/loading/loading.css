@@ -1,0 +1,11 @@
+.load.loading{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 99999;
+    background: #fff url("../../assets/img/loading-24.svg") no-repeat center;
+    background-size: 15%;
+}

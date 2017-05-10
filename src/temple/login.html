@@ -1,0 +1,34 @@
+<div class="wrap" id="login">
+    <section class="pic">
+        <img>
+    </section>
+    <section class="tips">
+        <p>亲爱的微信平台用户：<span>You Are My Sunshine</span></p>
+        <p>为了给你提供更好的服务，请输入手机号进行登录</p>
+    </section>
+    <section class="input_group">
+        <div class="input_group_item">
+            <input type="text" placeholder="手机号" id="mobile" maxlength="11" >
+            <span class="err"></span>
+        </div>
+        <div class="input_group_item">
+          <div class="input_group_item_wrap">
+              <input type="text" placeholder="验证码" id="valid_msg" maxlength="6">
+              <span class="err valid"></span>
+          </div>
+            <button class="btn small" id="sendMsg" >发送验证码</button>
+        </div>
+        <div class="input_group_item">
+            <input type="password" placeholder="密码" id="pwd" >
+            <span class="err"></span>
+        </div>
+    </section>
+    <section id="login_btn">
+        <button type="button" class="btn full">登录</button>
+    </section>
+    <section class="agreement">
+        <p>温馨提示：未注册你好医生帐号的手机号，登录时将自动注册，且代表您已同意
+            <router-link :to="{ name: 'agreement'}">《用户协议》</router-link>
+        </p>
+    </section>
+</div>

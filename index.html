@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>你好医生</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width, initial-scale=1,initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- 样式引入 不在require中引入-->
+        <link rel="stylesheet" href="src/assets/css/normalize.css">
+        <link rel="stylesheet" href="src/assets/css/common.css">
+        <link rel="stylesheet" href="src/assets/css/style.css">
+    </head>
+    <body>
+        <div id="app">
+            <router-view></router-view>
+        </div>
+        <!-- require主入口-->
+    <script src="src/require.js" data-main="src/config.js" ></script>
+</body>
+</html>

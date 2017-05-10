@@ -1,0 +1,45 @@
+<section id="appointHist">
+    <div class="appointment_list">
+        <div class="appointment_list_item" v-for="item in  appoint_list" @click="viewDetail(item)">
+            <div class="product_name">
+                <span v-text="item.ChargeName"></span>
+                <span class="product_status" v-text="apStatus(item)">已过期</span>
+            </div>
+            <div class="product_content">
+                <p class="product_list">
+                    <span class="product_tag">预约时间</span>
+                    <span class="product_value" v-text="formatApTime(item)"></span>
+                </p>
+                <p class="product_list">
+                    <span class="product_tag">预约医生</span>
+                    <span class="product_value" v-text="item.UserName"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="appointDetail">
+        <section class="appointment">
+            <p>预约详情</p>
+            <ul class="detail_list">
+                <li  class="detail_item">
+                    <span class="tag">医院</span>
+                    <span class="content" v-text="currAp.HospitalName"></span>
+                </li>
+                <li  class="detail_item">
+                    <span class="tag">医生</span>
+                    <span class="content" v-text="currAp.UserName"></span>
+                </li>
+                <li  class="detail_item">
+                    <span class="tag">治疗项目</span>
+                    <span class="content" v-text="currAp.ChargeName"></span>
+                </li>
+                <li  class="detail_item">
+                    <span class="tag">预约日期</span>
+                    <span class="content" v-text="formatApTime(currAp)"></span>
+                </li>
+            </ul>
+            <div class="btn cancel" v-if="cancelable()" @click="showCancelApAlert()">取消预约</div>
+            <a class="back" @click="back()">返回</a>
+        </section>
+    </div>
+</section>

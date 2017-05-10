@@ -1,0 +1,222 @@
+
+
+#personal .user_info{
+    height: 256px;
+    background-color: #fff;
+    padding-top: 36px;
+}
+#personal .user_info .user_head{
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+
+    box-shadow: 0 0 40px rgba(88, 125, 160, 0.3);
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    overflow: hidden;
+}
+#personal .user_info .user_head img{
+    width: 112px;
+    height: 112px;
+    display: block;
+    border: none;
+    margin-left: -1px;
+    margin-top: -1px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-image-width: 0;
+}
+#personal .user_info .user_name{
+    font-size: 2.6em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 16px;
+}
+#personal .user_info .other_info{
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 25px;
+}
+#personal .user_info .other_info .icon.male{
+    vertical-align: middle;
+    margin-right: 18px;
+    display:inline-block ;
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+}
+#personal .user_info .other_info .icon.female{
+    vertical-align: middle;
+    margin-right: 18px;
+    display:inline-block ;
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+}
+
+
+#personal .settings{
+    margin-top: 12px;
+}
+#personal .settings-group{
+    margin-bottom: 12px;
+    border-bottom: 1px solid #dce3e8;
+    border-top: 1px solid #dce3e8;
+}
+#personal .settings-item{
+    cursor: pointer;
+    font-size:1.6em;
+    display: flex;
+    padding-left: 16px;
+    height: 43px;
+    line-height: 43px;
+    background-color: #fff;
+}
+#personal .settings-item span{
+    line-height: 43px;
+    flex: 1;
+}
+#personal .settings-item span.line{
+    border-bottom: 1px solid #dce3e8;
+}
+#personal .settings-item i{
+    margin-top: 9px;
+    display: inline-block;
+    line-height: 43px;
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+#personal .icon.settings_myhos{
+    background: url("../../img/icon_myhos.png") 100% center;
+    background-size: cover;
+}
+#personal .icon.settings_appoints{
+    background: url("../../img/appoint.png") 100% center;
+    height: 26px;
+    margin-top: 6px;
+    background-size: cover;
+}
+#personal .icon.settings_set{
+    background: url("../../img/icon_settings.png") 100% center;
+    background-size: cover;
+}
+#personal .icon.male{
+    background: url("../../img/icon_male.png") 100% center;
+    background-size: cover;
+}
+#personal .icon.female{
+    background: url("../../img/icon_female.png") 100% center;
+    background-size: cover;
+}
+#personal .icon.arrow-right{
+    background: url("../../img/icon_setting_arrow.png") 100% center;
+    background-size: cover;
+    width: 11px;
+    height: 18px;
+    margin-top: 13px;
+}
+
+
+
+#personal .settings.appoint{
+    margin-top: 0;
+}
+#personal .account {
+    border-bottom: 1px solid #dce3e8;
+    padding: 20px 0;
+    background: #fff;
+    text-align: center;
+    display: flex;
+}
+#personal .account-item{
+    cursor:pointer ;
+}
+#personal .balance{
+    flex: 1;
+    color: #ff75a3;
+}
+#personal .voucher{
+    flex: 1;
+    border-left: 1px solid #dce3e8;
+    border-right: 1px solid #dce3e8;
+    color: #ffc527;
+}
+#personal .points{
+    flex: 1;
+    color: #55a8fd;
+}
+#personal .integer{
+    font-size: 1.3em;
+}
+#personal .account .tag{
+    margin-top:10px;
+}
+
+
+#personal .topHos {
+    height: 31px;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+    margin: 0;
+    padding-left:16px;
+    position: relative;
+}
+#personal .topHos .hosHead{
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+    float: left;
+    margin-top: 8px;
+}
+#personal .topHos .moreHos{
+    float: right;
+    margin-top: 8px;
+    margin-right: 26px;
+    font-weight: normal;
+    color: #898e95;
+}
+#personal .topHos .moreHos:after{
+    content: '';
+    display: inline-block;
+    clear: both;
+    background: url("../../img/icon_setting_arrow.png") no-repeat center;
+    width: 9px;
+    height: 13px;
+    background-size: cover;
+    margin-left: 4px;
+    position: relative;
+    top: 2px;
+}
+#personal .topHos .hosName {
+    position: absolute;
+    left: 40px;
+    right: 100px;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 31px;
+    line-height: 31px;
+    font-weight: normal;
+
+}
+#myHosCard {
+    display: none;
+}

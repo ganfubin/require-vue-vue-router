@@ -1,0 +1,16 @@
+<div class="wrap" id="balance-detail">
+    <header>
+        <h2>余额明细</h2>
+        <a @click="back()"></a>
+    </header>
+    <p class="tag">余额明细</p>
+    <div class="detail_list_wrap">
+        <ul class="detail_list" v-if="list.length!=0">
+            <li class="detail_item" v-for="item in list">
+                <p class="name" v-text="item.Name">预收款</p>
+                <p class="time" v-text="item.CreateTime"></p>
+                <span class="amount" v-text="item.Amount>0?'+'+item.Amount:item.Amount"></span>
+            </li>
+        </ul>
+    </div>
+</div>

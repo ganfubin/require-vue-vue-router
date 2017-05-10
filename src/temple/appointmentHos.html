@@ -1,0 +1,8 @@
+<section id="appoint_hos">
+    <div class="appoint_hos_list">
+        <div class="appoint_hos_item" v-for="item in hosList" @click="jump(item)">
+            <p v-text="item.companyName"></p>
+            <i class="icon arrow_right"></i>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<div class="wrap" id="balance">
+    <header>
+        <h2>余额</h2>
+        <a  @click="back()"></a>
+    </header>
+    <div class="money">
+        <div>
+            <h3>账户总额</h3>
+            <h2>￥<span v-text="rest"></span></h2>
+        </div>
+        <a @click="checkDetail()">查看明细</a>
+    </div>
+    <h3 class="instruction">类型<span>金额</span></h3>
+    <div class="list">
+        <div class="item show" v-for="item in balanceList">
+            <h2 @click="toggleDetail($event)"><span v-text="item.Name"></span><span class="Num" v-text="'￥'+item.Rest">￥5800.00</span></h2>
+            <div class="toggleContent">
+                <h3>使用范围：<span v-text="item.Scope"></span></h3>
+                <div>
+                    <em>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：</em>
+                    <p v-text="item.CreateTime"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

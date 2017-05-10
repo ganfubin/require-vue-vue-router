@@ -1,0 +1,17 @@
+<div class="wrap" id="myHos">
+    <section class="myhos_list" >
+        <div class="myhos_item" v-for="item in hosList" @click="jump(item)">
+            <div class="hos_pic" :style="{ background: 'url('+'http://www.hellodoctor.com.cn/'+item.logo+') no-repeat',backgroundSize:'contain' }">
+                <img :src="srcUrl+item.logo">
+            </div>
+            <div class="hos_content">
+                <p class="hos_name" v-text="item.companyName"></p>
+                <p class="hos_address" v-text="item.areaAddress+item.areaAddress+item.areaAddress"> </p>
+            </div>
+            <span class="btn bind" v-if="item.isTop">默认</span>
+        </div>
+    </section>
+    <section class="empty" v-if="hosList.length==0"></section>
+    <section id="loading"></section>
+    <router-link :to="{name: 'addHos'}" id="add_hos"><i class="icon add"></i>添加医院</router-link>
+</div>

@@ -1,0 +1,30 @@
+<div class="wrap" id="confirm">
+    <section class="doctor">
+        <div class="pic">
+            <img :src="imagePath+defaultStaffHead">
+        </div>
+        <div class="name" v-text="param.staffName" ></div>
+    </section>
+    <section class="content">
+        <ul class="info">
+           <li class="info_item">
+               <div class="tag">就诊医院</div>
+               <div class="value" v-text="param.subHospitalName"></div>
+           </li>
+            <li class="info_item">
+                <div class="tag">就诊项目</div>
+                <div class="value" v-text="param.ChargeName">玻尿酸</div>
+            </li>
+            <li class="info_item">
+                <div class="tag">就诊时间</div>
+                <div class="value" v-text="fullDate()"></div>
+            </li>
+        </ul>
+        <div class="time_list">
+            <p class="time_item " v-for="item in timeArr " v-text="item" @click="selTime(item)" :class="{active:isActive(item),disabled:isDisabled(item)}">7:30-8:30</p>
+        </div>
+    </section>
+    <section id="appointment"><p @click="appoint">预约</p></section>
+    <div class="mask"></div>
+    <div id="loading"></div>
+</div>

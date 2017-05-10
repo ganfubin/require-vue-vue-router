@@ -1,0 +1,19 @@
+<div class="wrap" id="points">
+    <header>
+        <h2>积分</h2>
+        <a @click="back()"></a>
+    </header>
+    <h2 class="current" >当前积分<span v-text="total">1,5000</span></h2>
+    <h3 class="point">积分明细</h3>
+    <div class="content">
+        <ul>
+            <li v-for="item in list">
+                <div class="mes">
+                    <h2 v-text="item.Type"></h2>
+                    <h3 v-text="item.CreateTime"></h3>
+                </div>
+                <p v-text="item.Amount>0?'+'+item.Amount:item.Amount"></p>
+            </li>
+        </ul>
+    </div>
+</div>

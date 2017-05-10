@@ -1,0 +1,52 @@
+<div class="wrap" id="modify">
+    <section class="header">
+        <div class="pic" >
+            <img >
+            <span id="uploadImg"></span>
+            <input type="file" accept="image/png/jpg"  name="file" id="file" capture="camera" />
+        </div>
+    </section>
+
+    <section class="modify_list">
+        <div class="modify_item" id="changeName">
+            <span class="tag">昵称</span>
+            <span class="value">阿彻</span>
+        </div>
+        <div class="modify_item" id="changeGender">
+            <span class="tag">性别</span>
+            <span class="value">男</span>
+            <i class="icon arrow_down"></i>
+        </div>
+        <div class="modify_item" id="changeBirth">
+            <span class="tag">生日</span>
+            <input id="pick_date" placeholder=""/>
+            <i class="icon arrow_down"></i>
+        </div>
+    </section>
+    <section class="modify_mask">
+        <div class="modify_name">
+            <p class="modify_header">修改昵称</p>
+            <div class="name_input">
+                <input type="text" id="newName">
+            </div>
+            <div class="modify_footer">
+                <div class="btn" id="cancel_modify">取消</div>
+                <div class="btn" id="sure_modify">修改</div>
+            </div>
+        </div>
+        <div class="modify_gender">
+            <div class="modify_group">
+                <div class="modify_item " id="female" data-value="0">女</div>
+                <div class="modify_item" id="male" data-value="1">男</div>
+            </div>
+            <div class="modify_group">
+                <div class="modify_item" id="cancel_gender">取消</div>
+            </div>
+        </div>
+    </section>
+    <section class="mask"></section>
+    <section class="submit_box">
+        <button type="button" id="save">保存</button>
+    </section>
+    <section id="loading"></section>
+</div>

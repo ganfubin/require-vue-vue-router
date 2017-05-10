@@ -1,0 +1,26 @@
+<div class="wrap" id="coupon">
+    <header>
+        <h2>抵用券</h2>
+        <a @click="back()"></a>
+    </header>
+    <div class="com-tit">
+        <h2 class="show-tit" @click="showExpired($event)">可用(<span v-text="expired.length"></span>)<em></em></h2>
+        <h2 @click="showOverDue($event)">过期(<span v-text="overdue.length"></span>)<em></em></h2>
+    </div>
+    <ul class="show-con" :class="{'empty':list.length==0}">
+        <li v-for="item in list" :class="{'expired':type==1}">
+            <div class="rest">
+                <p  class="rest-num" v-text="'¥'+item.Rest"></p>
+                <p class="rest-text">余额</p>
+            </div>
+            <div class="info">
+                <h3 v-text="item.Name" class="coupon_name"></h3>
+                <p class="coupon_desc"><span class="tag">总&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额:</span><span class="value" v-text="'¥'+item.Amount"></span></p>
+                <p class="coupon_desc"><span class="tag">使用范围:</span><span class="value"  v-text="item.Scope"></span></p>
+                <p class="coupon_desc"><span class="tag">使用时间:</span><span class="value" v-text="timeScope(item.CreateTime,item.Expiration)"></span></p>
+            </div>
+            <div class="code" v-if="type==1"></div>
+        </li>
+    </ul>
+    <cmptLoading v-bind:loding="loding" :lodingTime="300"></cmptLoading>
+</div>

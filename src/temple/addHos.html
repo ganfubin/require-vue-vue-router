@@ -1,0 +1,29 @@
+<div class="wrap" id="add-hos">
+    <section class="all_tag">
+        <section class="tag_list" v-for="(item,index) in list">
+            <p class="tag" :id="index" v-text="index"></p>
+            <div class="hos_list">
+                <div class="hos_item" v-for="v in item" @click="jump(v)">
+                    <div class="hos_pic" v-bind:style="{
+                        background: 'url('+'http://www.hellodoctor.com.cn/'+v.logo+') no-repeat',
+                        backgroundSize:'contain'
+                    }">
+                    </div>
+                    <div class="content">
+                        <p class="hos_name" v-text="v.companyName"></p>
+                        <p class="hos_address" v-text="getAddress(v)"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="index">
+        <ul class="index_list">
+            <li class="index_item" v-for="item in indexList" ><a @click="indexed(item)" :data-jump="item.toUpperCase()" v-text="item.toUpperCase()"></a></li>
+        </ul>
+    </section>
+    <section >
+        <p class="back_to_myHos" @click="backToMyHos">取消</p>
+    </section>
+    <section id="loading"></section>
+</div>

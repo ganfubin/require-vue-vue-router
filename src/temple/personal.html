@@ -1,0 +1,76 @@
+<div class="wrap" id="personal">
+    <section class="user_info">
+        <router-link :to="{ name: 'login'}" v-show="tipsToggle">
+            <p class="public_tips">绑定微信,获得更好的服务>></p>
+        </router-link>
+            
+        <div class="user_head">
+            <img class="js-user-img">
+        </div>
+        <p class="user_name js-user-name">You Are My Sunshine</p>
+        <p class="other_info">
+            <!--默认男性-->
+            <span class="icon male js-icon-male" v-if="userInfo.gender == 1"></span >
+            <span class="icon female js-icon-female hide" v-else></span >
+            <span class="user_age js-user-age">{{userInfo.age}}</span>
+        </p>
+    </section>
+    <section class="settings appoint">
+        <div class="settings-group">
+            <a href="javascript:void(0);" class="settings-item jump" @click="routerLink" data-url="appointmentHos"><i class="icon settings_appoints"></i><span >预约记录</span><i class="icon arrow-right"></i></a>
+        </div>
+    </section>
+
+
+    <section class="settings" id="myHos" v-show="myHosToggle">
+        <div class="settings-group">
+            <a href="javascript:void(0);" class="settings-item jump" @click="routerLink" data-url="myhos"><i class="icon settings_myhos"></i><span >我的医院</span><i class="icon arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="settings" id="myHosCard" v-show="!myHosToggle">
+        <div class="topHos">
+            <h4><img class="hosHead" :src="hosImgSrc"><span class="hosName">{{hosName}}</span><a class="moreHos" @click="routerLink" data-url="myhos" data-parm="true">更多医院</a></h4>
+        </div>
+        <div class="account">
+            <div class="account-item balance" @click="routerLink" data-url="hosBanlance" data-parm="true">
+                <p class="number">
+                    <span class="integer">{{info.balance.integer}}</span>.
+                    <span class="decimal">{{info.balance.decimal}}</span>
+                </p>
+                <p class="tag">余额</p>
+            </div>
+            <div class="account-item voucher" @click="routerLink" data-url="hosCoupon" data-parm="true">
+                <p class="number">
+                    <span class="integer">{{info.voucher.integer}}</span>.
+                    <span class="decimal">{{info.voucher.integer}}</span>
+                </p>
+                <p class="tag">抵用券</p>
+            </div>
+            <div class="account-item points"  @click="routerLink" data-url="hosPoints" data-parm="true">
+                <p class="number">
+                    <span class="integer">{{info.points.integer}}</span>.
+                    <span class="decimal">{{info.points.integer}}</span>
+                </p>
+                <p class="tag">积分</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="settings">
+        <div class="settings-group">
+            <a href="javascript:void(0);" class="settings-item jump" @click="routerLink">
+                <i class="icon settings_set"></i><span>修改密码</span><i class="icon arrow-right"></i>
+            </a>
+            <a href="javascript:void(0);" class="settings-item jump" @click="routerLink">
+                <i class="icon settings_set"></i><span>反馈</span><i class="icon arrow-right"></i>
+            </a>
+            <a href="javascript:void(0);" class="settings-item jump" data-url="settings" @click="routerLink">
+                <i class="icon settings_set"></i><span>设置</span><i class="icon arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    <cmptLoading v-bind:loding="loding" :lodingTime="300"></cmptLoading>
+    <div id="test"></div>
+</div>

@@ -1,0 +1,158 @@
+#login.wrap{
+    padding: 16px 16px 0;
+}
+#login .btn{
+    background-color: #55a8fd;
+    color: #fff;
+    font-size: 1.5em;
+
+    border-radius: 3px ;
+    -webkit-border-radius: 3px ;
+    -moz-border-radius: 3px ;
+
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+}
+#login .btn.full{
+    width: 100%;
+}
+#login .pic{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+
+    border-radius: 50% ;
+    -webkit-border-radius: 50% ;
+    -moz-border-radius: 50%;
+
+}
+#login .pic{
+    margin-bottom: 10px;
+}
+#login .pic img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50% ;
+    -webkit-border-radius: 50% ;
+    -moz-border-radius: 50%;
+}
+#login .tips{
+    font-size: 1.4em;
+    color: #999;
+
+    margin-bottom: 17px;
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+    font-size: 1.6em;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    outline: none;
+    display: flex;
+    border: 1px solid #e5e5e5;
+    color: #333;
+    height: 40px;
+    line-height: 24px;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px 0 8px 13px;
+}
+#login #sendMsg{
+    font-size: 1.4em;
+    padding: 0 15px;
+
+    white-space: nowrap;
+
+}
+#login #sendMsg[disabled]{
+    color: #aaa;
+    border:1px solid #e5e5e5;
+    background-color: #fff;
+}
+#valid_msg{
+    float: left;
+
+    margin-right: 16px;
+}
+#login_btn{
+    margin-top: 17px;
+}
+#login .agreement{
+    margin-top: 12px;
+    color: #ccc;
+}
+#login .agreement a{
+    color: #587da0;
+    font-size: 1.2em;
+}
+#login .input_group_item {
+    position: relative;
+    display: flex;
+}
+#login .input_group_item:after{
+    content: '';
+    display: block;
+    clear: both;
+    opacity: 0;
+}
+#login .input_group_item .err{
+    position: absolute;
+    right: 13px;
+    top: 0;
+    color: #ed5047;
+    line-height: 40px;
+    height: 40px;
+}
+#login .input_group_item .err.valid{
+    right: 10px;
+}
+#login .login_mask{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: none;
+}
+#login .login_mask .sendError{
+    width: 70%;
+    max-width: 540px;
+    background: #fff;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding-top: 26px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -35%;
+    margin-top: -130px;
+    color: #111;
+}
+#login .login_mask .sendError .title{
+    font-size: 1.6em;
+
+    margin-bottom: 14px;
+}
+#login .login_mask .sendError .content{
+    font-size: 1.3em;
+    margin-bottom: 17px;
+}
+#login .login_mask .sendError .login_mask_btn {
+    font-size: 1.6em;
+    color: #55a8fd;
+    height: 44px;
+    line-height: 44px;
+    border-top: 1px solid #d9d9d9;
+}
+#login .input_group_item_wrap{
+    position: relative;
+    margin-right: 12px;
+    flex: 1;
+}

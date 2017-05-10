@@ -1,0 +1,66 @@
+    <div class="wrap" id="cure-detail">
+        <!--详情头部-->
+        <div class="cure_progress_box">
+            <div class="cure_progress_bg"  @click="goProgress()">
+                <h1 class="name" v-text="param.ChargeName"></h1>
+                <p v-text="getStatus()"></p>
+                <div class="content">
+                    <div class="total">
+                        <p class="line">总</p>
+                        <p class="number" v-text="param.TotalNum+param.UnitName"></p>
+                    </div>
+                    <div class="chars" >
+                        <div class="item done" v-for="item in param.TotalNum-param.RestNum"></div>
+
+                        <div class="item" v-for="item in param.RestNum-0"></div>
+
+                    </div>
+                    <div class="surplus">
+                        <p class="line">剩</p>
+                        <p class="number" v-text="param.RestNum+param.UnitName"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--详情选折医院-->
+        <div class="choose_hos">
+            <p @click="selHos()" ><span v-html="defaultSubHos.Name"></span><span class="icon arrow"></span></p>
+        </div>
+        <!--选折时间-->
+        <div class="scroll-wrap">
+            <ul class="choose_date">
+                <li v-for="item in date" :class="{active:isToday(item)}" @click="changeDate(item)">
+                    <p class="day" v-text="item.day"></p>
+                    <p class="date" v-text="item.time"></p>
+                </li>
+            </ul>
+        </div>
+        <!--医生列表-->
+        <div class="doctors_list">
+            <div class="doctors_item" v-for="item in doctorsList" @click="jumpConfirm(item)">
+                <div class="pic">
+                    <img :src="imagePath+defaultStaffHead" >
+                </div>
+                <div class="content">
+                    <p class="name" v-text="item.UserName"></p>
+                    <p class="position"></p>
+                    <p class="detail" v-text="item.StartTime.slice(0,-3)+'~'+item.EndTime.slice(0,-3)">接诊:7:00~19:00</p>
+                </div>
+                <span class="btn appoint" v-if="isFull(item)">预约</span>
+                <span class="btn full" v-if="!isFull(item)">已满</span>
+            </div>
+
+        </div>
+        <section id="loading"></section>
+        <section class="mask">
+            <div class="bg">
+                <ul class="hos_list">
+                    <li class="hos_item" v-for="item in subHos" @click="changeCurrentHos(item)">
+                        <div class='hos_name'><p v-text="item.Name"> </p><i :class="{current:isCurrentHos(item.ID)}" ></i></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="pop"></div>
+        </section>
+
+    </div>
