@@ -1,4 +1,4 @@
-#coupon .wrap {
+#coupon.wrap {
     padding-top: 3.3rem;
     background-color: #edf3f8;
 
@@ -166,7 +166,7 @@
     background: url("../../img/empty_coupon.png") no-repeat center;
     background-size: 25%;
 }
-.rest {
+#coupon.rest {
     display: table-cell;
     vertical-align: middle;
     height: 8.89em;
@@ -174,19 +174,19 @@
     text-align: center;
     padding-top: 2.75em;
 }
-.rest-num {
+#coupon .rest-num {
     font-size: 1.875em;
 }
-li.expired .rest-num,li.expired .rest-text {
+#coupon li.expired .rest-num,li.expired .rest-text {
     color: #b9bcc0;
 }
-li .rest-num,li .rest-text {
+#coupon li .rest-num,li .rest-text {
     color: #a198f8;
 }
-li .info {
+#coupon li .info {
     flex: 1;
 }
-li .coupon_name {
+#coupon li .coupon_name {
     height: 1.78em;
     border-bottom: 1px solid #dce3e8;
     line-height:1.78em;
@@ -194,16 +194,16 @@ li .coupon_name {
     color: #797f97;
     margin-bottom: 0.58em;
 }
-li.expired .coupon_name {
+#coupon li.expired .coupon_name {
     color: #b9bcc0;
 }
 
-.info .coupon_desc span {
+#coupon .info .coupon_desc span {
     font-size: 0.92em;
     line-height: 0.92em;
     color: #b9bcc0;
 }
-.rest:before {
+#coupon .rest:before {
     content: '';
     position: absolute;
     width: 12px;
@@ -216,7 +216,7 @@ li.expired .coupon_name {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
 }
-.rest:after {
+#coupon .rest:after {
     content: '';
     position: absolute;
     width: 12px;

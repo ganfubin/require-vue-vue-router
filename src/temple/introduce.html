@@ -1,0 +1,9 @@
+<div class="wrap" id="introduce">
+    <header>
+        <h2>医院简介</h2>
+        <a class="back" @click="back"></a>
+    </header>
+    <p class="introduce" v-text="introduce">
+    </p>
+    <cmptLoading v-bind:loding="loding" :lodingTime="300"></cmptLoading>
+</div>

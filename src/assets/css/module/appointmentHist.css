@@ -1,0 +1,113 @@
+#appointHist{
+    display: none;
+}
+#appointHist .title{
+
+    height: 45px;
+    font-size: 1.6em;
+    color: #55a8fd;
+    text-align: center;
+    background-color: #fff;
+}
+#appointHist .appointment_list_item{
+    cursor: pointer;
+    height: 120px;
+    background-color: #fff;
+    border-top:1px solid #dce3e8 ;
+    border-bottom: 1px solid #dce3e8;
+    margin-top: 16px;
+}
+#appointHist .product_name{
+    padding: 0 16px;
+    height: 50px;
+    border-bottom: 1px solid #dce3e8;
+    font-size: 1.6em;
+    line-height: 50px;
+
+}
+#appointHist .product_status{
+    color: #8e8e93;
+    float: right;
+    text-align: right;
+}
+#appointHist .product_content{
+    font-size: 1.4em;
+    padding: 0 16px;
+}
+#appointHist .product_list{
+    margin-top: 14px;
+}
+#appointHist .product_tag{
+    color: #8e8e93;
+    margin-right: 20px;;
+}
+#appointHist .appointDetail{
+    width: 100%;
+    position: fixed;
+    left: 100%;
+    right: -100%;
+    bottom: 0;
+    top: 0;
+    background-color: #EDF3F8;
+}
+#appointHist .appointment>p{
+    background-color: #edf3f8;
+    padding:0 16px;
+    font-size: 1.2em;
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px solid #dce3e8;
+}
+#appointHist .detail_list{
+    background-color: #fff;
+    font-size: 1.4em;
+}
+#appointHist .detail_item{
+    line-height: 44px;
+    padding: 0 16px;
+    height: 43px;
+    border-bottom: 1px solid #dce3e8;
+}
+#appointHist .detail_item .tag{
+    color: #8e8e93;
+    margin-right: 20px;
+}
+#appointHist .appointment .back{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background-color: #fff;
+    color: #55a8fd;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}
+#appointHist .btn.cancel{
+    font-size: 1.6em;
+    line-height: 40px;
+    text-align: center;
+    /* margin-top: 40px; */
+    background-color: #fff;
+    width: 200px;
+    margin: 40px auto 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+
+    box-shadow: 0 0 40px #D8D8D8;
+    -webkit-box-shadow: 0 0 40px #D8D8D8;
+    -moz-box-shadow: 0 0 40px #D8D8D8;
+    -o-box-shadow:  0 0 40px #D8D8D8;
+}
+#appointHist .product_name span:first-child {
+    position: absolute;
+    left: 16px;
+    right: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}

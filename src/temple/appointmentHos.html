@@ -1,8 +1,9 @@
-<section id="appoint_hos">
+<section id="appointHos">
     <div class="appoint_hos_list">
         <div class="appoint_hos_item" v-for="item in hosList" @click="jump(item)">
             <p v-text="item.companyName"></p>
             <i class="icon arrow_right"></i>
         </div>
     </div>
+    <cmptLoading v-bind:loding="loding" :lodingTime="300"></cmptLoading>
 </section>

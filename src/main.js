@@ -8,6 +8,7 @@ define(function(require){
     var $ = require('jquery');
     var FastClick = require('fastclick');
     FastClick.attach(document.body);
+    require('commonRem');
     
     Vue.config.debug = true;
     Vue.config.devtools = true;

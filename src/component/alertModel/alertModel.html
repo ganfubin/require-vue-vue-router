@@ -1,0 +1,10 @@
+<div class="mask" v-show="alertToggle">
+	<div class="alert" >
+		<p class="alert_title">{{alert.title}}</p>
+		<p class="alert_content">{{alert.content}}</p>
+		<div class="alert_footer">
+			<a class="alert_btn cancel" @click="cancel">{{alert.cancelText}}</a>
+			<a class="alert_btn sure" @click="ok">{{alert.sureText}}</a>
+		</div>
+	</div>
+</div>

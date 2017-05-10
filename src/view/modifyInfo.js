@@ -8,13 +8,13 @@ define(function (require, exports, module) {
     var vueComponent = Vue.extend({
         template: sTpl,
         mounted: function(){
-                this.$nextTick(function(){
-                    var _vm = this;
-                    var $dom = $(_vm.$el);
-                    _vm.$dom = $dom;
-                    loginScriptInit($dom);
-                })
-            }
+            this.$nextTick(function(){
+                var _vm = this;
+                var $dom = $(_vm.$el);
+                _vm.$dom = $dom;
+                loginScriptInit($dom);
+            })
+        }
     });
 
     function loginScriptInit($dom){

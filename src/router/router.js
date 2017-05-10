@@ -80,6 +80,34 @@ define(function(require){
           component: function(resolve){
              require(['src/view/addHos.js'], resolve)
            }
+      },
+      {
+          path: '/hosDetail',
+          name: 'hosDetail',
+          component: function(resolve){
+             require(['src/view/hosDetail.js'], resolve)
+           }
+      },
+      {
+          path: '/appointmentHos',
+          name: 'appointmentHos',
+          component: function(resolve){
+             require(['src/view/appointmentHos.js'], resolve)
+           }
+      },
+      {
+          path: '/appointmentHist',
+          name: 'appointmentHist',
+          component: function(resolve){
+             require(['src/view/appointmentHist.js'], resolve)
+           }
+      },
+      {
+          path: '/introduce',
+          name: 'introduce',
+          component: function(resolve){
+             require(['src/view/introduce.js'], resolve)
+           }
       }
   	]
   });

@@ -1,0 +1,205 @@
+#hosDetail .hos_info{
+    padding-bottom: 20px;
+    background-color: #55a8fd;
+    color: #fff;
+    text-align: center;
+    padding-top: 36px;
+}
+#hosDetail .hos_pic{
+    width: 106px;
+    height: 106px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+
+    border: 3px solid #84c9ff;
+    background-color: #fff;
+    margin: 0 auto 24px;;
+}
+#hosDetail .hos_pic img{
+    display: block;
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+#hosDetail .hos_status{
+    position: relative;
+    display: inline-block;
+    background-color: #ffc527;
+    color: #fff;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    top: -11px;
+}
+#hosDetail .hos_name{
+    font-size: 2em;
+    margin-bottom: 15px;
+    padding: 0 16px;
+}
+#hosDetail .hos_address span{
+    padding-left: 25px ;
+    background: url("../../img/icon_gps.png")   no-repeat left;
+    background-size: contain;
+}
+#hosDetail .hos_memo{
+    border-top: 1px solid #dce3e8;
+    border-bottom: 1px solid #dce3e8;
+    padding: 20px 16px;
+    background-color: #fff;
+    margin-top: 12px;
+}
+#hosDetail .hos_memo h1{
+    color: #2a3c4c;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+#hosDetail .memo_detail{
+    word-break: break-all;
+    line-height: 1.4em;
+    font-size: 1.4em;
+    color: #8e8e93;
+}
+#hosDetail .operation a{
+    cursor: pointer;
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #55a8fd;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.8em;
+}
+#bind i{
+    display: inline-block;
+    width: 22px;
+    height: 13px;
+    background: url("../../img/icon_binding.png")   no-repeat left;
+    background-size: contain;
+    margin-right: 5px;
+}
+
+#hosDetail.wrap .icon.back{
+    position: absolute;
+    background: url("../../img/icon_back_white.png") no-repeat center;
+    background-size: cover;
+    width: 10px;
+    height: 18px;
+    left: 16px;
+    top: 9px;
+}
+#hosDetail .settings {
+    border-top: 1px solid #dce3e8;
+    border-bottom: 1px solid #dce3e8;
+    margin-top: 12px;
+    background-color: #fff;
+    padding-left: 16px;
+    line-height: 48px;
+    color: #2a3c4c;
+    font-size: 1.5em;
+}
+#hosDetail .settings-item:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#hosDetail .settings-item {
+    padding-right: 16px;
+    background-color: #fff;
+}
+#hosDetail .settings-item:not(:last-child){
+    border-bottom: 1px solid #dce3e8;
+}
+#hosDetail .settings-item .icon.arrow-right {
+    float: right;
+    display: inline-block;
+    background: url("../../img/icon_setting_arrow.png") no-repeat center;
+    width: 11px;
+    height: 18px;
+    background-size: cover;
+    margin-top: 16px;
+}
+#hosDetail .settings-item>p {
+    float: left;
+}
+#hosDetail .tab-bg{
+    position: relative;
+    float: right;
+    height: 32px;
+    width: 56px;
+    background-color: #4fb2ff;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    margin-top: 8px;
+}
+#hosDetail .tab-circle {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    top:2px;
+    left:26px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+    box-shadow: 0 0 5px #aaa;
+    cursor: pointer;
+
+    transition: left 0.3s;
+}
+#hosDetail .tab-bg.off{
+     border: 2px solid #e0e0e0;
+    background-color: #fff;
+}
+#hosDetail .tab-bg.off .tab-circle{
+    top:0;
+    left: 0;
+    right: auto;
+}
+#hosDetail .account {
+    border-bottom: 1px solid #dce3e8;
+    padding: 20px 0;
+    background: #fff;
+    text-align: center;
+    display: flex;
+}
+#hosDetail .account-item{
+    cursor:pointer ;
+}
+#hosDetail .balance{
+    flex: 1;
+    color: #ff75a3;
+}
+#hosDetail .voucher{
+    flex: 1;
+    border-left: 1px solid #dce3e8;
+    border-right: 1px solid #dce3e8;
+    color: #ffc527;
+
+}
+#hosDetail .points{
+    flex: 1;
+    color: #55a8fd;
+}
+#hosDetail .integer{
+    font-size: 1.3em;
+}
+#hosDetail .account .tag{
+    margin-top:10px;
+}

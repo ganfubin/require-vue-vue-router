@@ -1,0 +1,18 @@
+#appointHos .appoint_hos_item{
+    cursor:pointer;
+    height: 43px;
+    border-bottom: 1px solid #dce3e8;
+    background-color: #fff;
+    line-height: 44px;
+    padding-left: 16px;
+    font-size: 1.4em;
+    position: relative;
+}
+#appointHos .icon.arrow_right{
+    position: absolute;
+    background: url("../../img/icon_setting_arrow.png") no-repeat center;
+    width: 15px;
+    height: 14px;
+    right: 16px;
+    top: 15px;
+}

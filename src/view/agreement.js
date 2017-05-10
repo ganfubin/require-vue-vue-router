@@ -6,20 +6,22 @@ define(function (require, exports, module) {
     var Vue = require("vue");
     var vueComponent = Vue.extend({
         template: sTpl,
-        methods: {
-            routerLink: function(){
-                this.$router.push('/personal');
-                
-            }
-
-        },
-        data:function(){
-            return{
-                msg:"学生信息页面",
-                myComData:"自定义组件的数据"
-            }
+        mounted: function(){
+            this.$nextTick(function(){
+                var _vm = this;
+                var $dom = $(_vm.$el);
+                _vm.$dom = $dom;
+                loginScriptInit($dom);
+            })
         }
     });
+    function loginScriptInit($dom){
+        var deviceWidth = document.documentElement.clientWidth;
+        var ag = document.getElementById('agreement');
+        if (deviceWidth < 640){
+            ag.style.width=320+'px'
+        }
+    }
 
     return vueComponent;
 });

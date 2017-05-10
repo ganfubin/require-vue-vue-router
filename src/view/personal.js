@@ -206,7 +206,6 @@ define(function (require, exports, module) {
                  }else{
                     url && this.$router.push(url);
                  }
-               
             }
 
         }

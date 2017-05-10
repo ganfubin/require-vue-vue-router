@@ -23,7 +23,7 @@
     top: 0;
     width: 13.33%;
     height: 100%;
-    background: url('../img/icon_back.png') center center no-repeat;
+    background: url('../../img/icon_back.png') center center no-repeat;
     background-size: 20% 38.64%;
 }
 #points.wrap .current {
@@ -50,13 +50,13 @@
 }
 #points .content{
     position: absolute;
-    top: 11.5em;
+    top: 12.25em;
     bottom: 0;
     left: 0;
     right: 0;
     overflow-y: scroll;
 }
-#points .wrap ul {
+#points.wrap ul {
     padding-left: 4.4%;
     border-bottom: 1px solid #dce3e8;
     background-color: #fff;

@@ -3,7 +3,7 @@
         <h2>积分</h2>
         <a @click="back()"></a>
     </header>
-    <h2 class="current" >当前积分<span v-text="total">1,5000</span></h2>
+    <h2 class="current" >当前积分<span v-text="total"></span></h2>
     <h3 class="point">积分明细</h3>
     <div class="content">
         <ul>
@@ -16,4 +16,5 @@
             </li>
         </ul>
     </div>
+    <cmptLoading v-bind:loding="loding" :lodingTime="300"></cmptLoading>
 </div>

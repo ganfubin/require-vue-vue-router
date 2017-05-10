@@ -23,7 +23,7 @@
     top: 0;
     width: 13.33%;
     height: 100%;
-    background: url('../img/icon_back.png') center center no-repeat;
+    background: url('../../img/icon_back.png') center center no-repeat;
     background-size: 20% 38.64%;
 }
 #balance .money {

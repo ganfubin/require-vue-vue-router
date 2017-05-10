@@ -1,0 +1,55 @@
+    <div class="wrap" id="hosDetail">
+        <section class="hos_info">
+            <div class="hos_pic">
+                <img  class="hos_img" :src="baseInfo.logoSrc">
+                <span class="hos_status" v-show="isStatus">已绑定</span>
+            </div>
+            <p class="hos_name">{{baseInfo.cName}}</p>
+            <p class="hos_address"><span>{{baseInfo.realAddress}}</span></p>
+            <i class="icon back" @click="back"></i>
+        </section>
+        <section class="account" v-show="isStatus">
+            <div class="account-item balance" @click="routerLink" data-url="hosBanlance" data-parm="true">
+                <p class="number">
+                    <span class="integer">{{pointInfo.balance.integer}}</span>.
+                    <span class="decimal">{{pointInfo.balance.decimal}}</span>
+                </p>
+                <p class="tag">余额</p>
+            </div>
+            <div class="account-item voucher" @click="routerLink" data-url="hosCoupon" data-parm="true">
+                <p class="number">
+                    <span class="integer">{{pointInfo.voucher.integer}}</span>.
+                    <span class="decimal">{{pointInfo.voucher.decimal}}</span>
+                </p>
+                <p class="tag">抵用券</p>
+
+            </div>
+            <div class="account-item points" @click="routerLink" data-url="hosPoints" data-parm="true">
+                <p class="number">
+                    <span class="integer">{{pointInfo.points.integer}}</span>.
+                    <span class="decimal">{{pointInfo.points.decimal}}</span>
+                </p>
+                <p class="tag">积分</p>
+            </div>
+        </section>
+
+
+
+        <section class="settings">
+            <div class="settings-item setTop" v-show="isStatus">
+                <p>设为默认</p>
+                <span class="tab-bg" id="setTop" :class="{off: !isTop}">
+                    <i class="tab-circle" @click="setIsTop"></i>
+                </span>
+            </div>
+            <div class="settings-item memo" @click="routerLink" data-url="introduce" data-parm="true">
+                <p>医院简介</p>
+                <i class="icon arrow-right"></i>
+            </div>
+        </section>
+        <section class="operation" v-show="bindToggle">
+            <a id="bind" @click="bindHos"><i></i>绑定医院</a>
+        </section>
+        <cmptLoading v-bind:loding="loding" :lodingTime="300"></cmptLoading>
+        <cmptAlertModel :option="alertOption" v-bind:alertShow="alertShow"></cmptAlertModel>
+    </div>
